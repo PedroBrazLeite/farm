@@ -1,6 +1,6 @@
 import './style.css';
 
-import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/three@0.139.2/build/three.module.js';
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
