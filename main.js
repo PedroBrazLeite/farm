@@ -3,6 +3,7 @@ import './style.css';
 import * as THREE from 'three';
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(
@@ -36,10 +37,14 @@ scene.add(light);
 scene.add(light2);
 scene.add(light3);
 
-camera.position.set(0, 2.5, 10);
+camera.position.set(0, 3, 10.5);
 function animate() {
 	requestAnimationFrame(animate);
 	obj.rotation.y += 0.01;
 	renderer.render(scene, camera);
 }
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.update();
+
 animate();
